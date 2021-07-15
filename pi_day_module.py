@@ -2,6 +2,7 @@ import math
 
 
 class PiDay:
+	pi_str = ""
 
 	def __init__(self, limit):
 		self.limit = limit
@@ -49,9 +50,20 @@ class PiDay:
 	  i = 0
 	  
 	  for d in pi_digits:
-	  	print(d, end="")
+	  	# print(d, end="")
+	  	self.pi_str += str(d)
+	  	self.calc_e()
 
 	  	i += 1
 	  	if i == 60:
 	  		print("")
 	  		i = 0
+
+	def calc_e(self):
+		pi_str = self.pi_str
+		pi_str = float(pi_str)
+
+		result = math.e ** pi_str - 20
+
+		print(result)
+
