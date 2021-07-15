@@ -50,14 +50,27 @@ class PiDay:
 	  i = 0
 	  
 	  for d in pi_digits:
-	  	# print(d, end="")
-	  	self.pi_str += str(d)
-	  	self.calc_e()
+	  	print(d, end="")
 
 	  	i += 1
 	  	if i == 60:
 	  		print("")
 	  		i = 0
+
+
+	def get_relation_e(self):
+		pi_digits = self.calcPi(self.limit)
+
+		i = 0
+
+		for d in pi_digits:
+			self.pi_str += str(d)
+			self.calc_e()
+
+			i += 1
+			if i == 60:
+				print(60)
+				i = 0 
 
 	def calc_e(self):
 		pi_str = self.pi_str
