@@ -11,9 +11,16 @@ while(1):
     break
 
   elif user_choice == 2:
-    p = PiDay(15)
+    p = PiDay(1000)
+
+    # geting the value of pi and e
+    p.get_pi()
+    print("\n")
+    p.compute_e()
     p.get_relation_e()
+
     break
 
   else:
     print("please enter a proper value")
+    break
