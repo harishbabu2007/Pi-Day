@@ -102,3 +102,21 @@ class PiDay:
 		print("Second Relation Between Pi and e")
 		print(round(use))
 		print("e^(pi*i) +1 = 0")
+
+	def value_at_place_pi(self):
+		limit = self.limit
+		pi_str = ""
+
+		pi_digits = self.calcPi(self.limit)
+
+		i = 0
+
+		for d in pi_digits:
+			pi_str += str(d)
+			i += 1
+			if i == 60:
+				i = 0
+
+		pi_str = pi_str[2:]
+		
+		print(f"the digit of pi at decimal place {limit} is : " + str(pi_str[len(pi_str)-1])) 
