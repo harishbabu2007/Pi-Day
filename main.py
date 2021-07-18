@@ -34,7 +34,3 @@ elif user_choice == 3:
 else:
   print("please enter a proper value")
   exit()
-
-
-while True:
-  pass
